@@ -1,0 +1,30 @@
+# AI: Regenerating cmake/uninstall.cmake.in (Fixed path reading)
+
+# CMake uninstall script template
+
+if(NOT EXISTS "@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt\"")
+endif()
+
+# Read the list of installed files line by line into a CMake list
+file(STRINGS "@CMAKE_CURRENT_BINARY_DIR@/install_manifest.txt" files)
+
+# Iterate over the list and remove each file/directory
+foreach(file ${files})
+  message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")
+  # Check if file or symlink exists before trying to remove
+  if(IS_SYMLINK "$ENV{DESTDIR}${file}" OR EXISTS "$ENV{DESTDIR}${file}")
+    # Use cmake -E remove (handles files and empty dirs)
+    execute_process(
+      COMMAND @CMAKE_COMMAND@ -E remove "$ENV{DESTDIR}${file}"
+      OUTPUT_VARIABLE rm_out
+      RESULT_VARIABLE rm_retval
+    )
+    if(NOT ${rm_retval} EQUAL 0)
+      # Warn instead of fatal error on removal failure (e.g., permissions)
+      message(WARNING "Problem removing \"$ENV{DESTDIR}${file}\".")
+    endif()
+  else()
+    message(STATUS "File \"$ENV{DESTDIR}${file}\" does not exist - skipping.")
+  endif()
+endforeach()

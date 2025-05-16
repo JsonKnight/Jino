@@ -1,0 +1,134 @@
+/* data/themes/nightowl.qss */
+/* Based on Night Owl */
+
+QMainWindow { }
+
+QTextEdit {
+    font-family: 'Dank Mono';
+    font-size: 14pt;
+    color: #d6deeb;                 /* Text */
+    background-color: #011627;      /* Surface/Base (Editor BG) */
+    selection-background-color: #5f7e97; /* Subtle Text as Selection BG */
+    selection-color: #d6deeb;        /* Text */
+    border: none;
+}
+
+QWidget#LineNumberWidget {
+    background-color: #011627;      /* Base */
+    border: none;
+    padding-right: 5px;
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border-top: 0px;
+    border-bottom: 2px solid #011627; /* Base/Border */
+    margin-bottom: -1px;
+}
+QTabBar::tab {
+    background: #011627;            /* Base (Bar BG) */
+    color: #5f7e97;                 /* Subtle Text for inactive tabs */
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #011627;      /* Base/Border */
+    border-top: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: #0b253a;            /* Bar Hover BG (Darker shade for selected tab) */
+    color: #d6deeb;                 /* Text */
+}
+QTabBar::tab:!selected {
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+QTabBar {
+    qproperty-drawBase: 0;
+}
+/* Style Tab Close Button */
+QTabBar::close-button {
+    background: transparent;
+    border-radius: 2px;
+}
+QTabBar::close-button:hover {
+    background: #0e2a44; /* A slightly lighter/different background on hover */
+}
+QTabBar::close-button:pressed {
+    background: #7fdbca; /* Highlight color on press */
+}
+
+
+/* Top Toolbar */
+QToolBar#TopStatusBar {
+    background: #011627;            /* Base (Bar BG) */
+    border: none;
+    padding: 3px;
+    spacing: 10px;
+}
+QToolBar#TopStatusBar QLabel {
+    color: #d6deeb;                 /* Bar Text */
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 3px; /* Add some margin between items */
+    margin-right: 3px;
+}
+QToolBar#TopStatusBar QToolButton {
+    color: #d6deeb;
+    background-color: transparent;
+}
+QToolBar#TopStatusBar QToolButton:hover {
+    background-color: #0b253a; /* Bar Hover BG */
+}
+
+
+/* Bottom Status Bar */
+QStatusBar {
+   background: #011627;            /* Base (Bar BG) */
+   color: #d6deeb;                 /* Bar Text */
+   border-top: 1px solid #0b253a;  /* Slightly lighter border */
+}
+QStatusBar QLabel { /* Style labels in status bar */
+   color: #d6deeb;                 /* Bar Text */
+   padding-left: 4px;
+   padding-right: 4px;
+   margin-left: 5px; /* Add some margin */
+   margin-right: 5px;
+}
+
+
+/* Menu Bar */
+QMenuBar {
+    background-color: #011627;      /* Base (Bar BG) */
+    color: #d6deeb;                 /* Bar Text */
+    padding: 2px;
+}
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 8px 4px 8px;
+}
+QMenuBar::item:selected {
+    background: #0b253a;            /* Bar Hover BG */
+    color: #d6deeb;                 /* Text */
+}
+
+/* Menus */
+QMenu {
+    background-color: #0b253a;      /* Bar Hover BG */
+    color: #d6deeb;                 /* Text */
+    border: 1px solid #5f7e97;      /* Subtle Border */
+    padding: 4px;
+}
+QMenu::item {
+    padding: 4px 20px 4px 20px;
+}
+QMenu::item:selected {
+    background-color: #7fdbca;      /* Highlight (Cyan) */
+    color: #011627;                 /* Base */
+}
+QMenu::separator {
+    height: 1px;
+    background: #5f7e97;            /* Subtle */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+QMenu::indicator:non-exclusive:checked { }

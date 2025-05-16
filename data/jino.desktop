@@ -1,0 +1,13 @@
+# data/jino.desktop
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Jino Editor
+GenericName=Text Editor
+Comment=Minimalist text editor with Vim modes
+Exec=jino %F
+Icon=jino
+Terminal=false
+Categories=Utility;TextEditor;Development;Qt;
+StartupWMClass=jino
+StartupNotify=true

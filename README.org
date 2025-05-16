@@ -1,0 +1,79 @@
+#+TITLE: Jino Editor - README
+#+AUTHOR: json
+#+DATE: 2025-04-28
+
+* Why It Exists ?
+
+I have used kwrite for an long time; it's my first text editor on linux.
+
+So, mainly i use it for quick writing text and works well;
+
+Sometimes it has some issues; which didn't matter to me
+
+and i want it to make like an personal editor;
+
+So; jino was created for writing and editing text and it works well
+
+With themeing and keybindings and i make it like an really personal taste for the editor.
+
+** Jino Editor ✨
+Jino is a minimalist, lighting fast text editor built with C++ and Qt.
+It features basic Vim modal editing (including visual selection actions), a static dark theme, line numbers, and aims for high performance. It recognizes Text, Markdown, and Org file types.
+
+** Features
+ - Tabbed interface
+ - Line numbers
+ - Dark theme (Tokyo Night Storm-like)
+ - Custom font support (Dank Mono embedded via Qt Resource System)
+ - Basic Vim modal editing (Normal/Insert/Visual modes)
+ - Editor Modes Recognised: Text (Default), Markdown (.md), Org (.org)
+ - Standard File Operations (New, Open, Save, Save As, Close Tab, Quit)
+ - Enhanced Status bar: Vim Mode, File Type, Line/Col, Char/Word Count, Elapsed Time
+ - Linux desktop integration (.desktop file, icon)
+ - Basic Command-Line Options (--help, --version, --name, --class)
+
+* Setup
+
+** Dependencies
+ - C++17 Compiler (GCC, Clang)
+ - CMake (>= 3.16)
+ - Qt5 Development Libraries (Core, Gui, Widgets)
+ - On Debian/Fedora: =sudo apt/dnf install qt5-qtbase-devel=
+ - Ruby & Rake (for using the build script)
+ - On Debian/Fedora: =sudo apt/dnf install ruby rake=
+
+** Building /con
+Use =rake= in the project root.
+ - Run: =rake [files...]= (Default)
+ - Build Only: =rake build=
+ - Build Debug: =BUILD_TYPE=Debug rake build=
+ - Clean: =rake clean=
+ - Rebuild: =rake rebuild=
+
+   #+begin_src sh
+
+     rake clean
+     rake build
+
+   #+end_src
+ 
+** Installation (System-Wide)
+Installs to =/usr/local= by default (requires sudo).
+
+   #+begin_src sh
+
+     # Install
+     sudo rake install
+
+     # Update caches after install (see task output for paths)
+     sudo update-desktop-database ...
+     sudo gtk-update-icon-cache ...
+
+   #+end_src
+
+** Uninstallation (System-Wide)
+Requires sudo and assumes Makefiles were used by CMake.
+
+   #+begin_src sh
+   sudo rake uninstall
+   #+end_src

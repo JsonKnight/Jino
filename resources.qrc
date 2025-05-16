@@ -1,0 +1,15 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+    <file alias="fonts/DankMono.otf">assets/fonts/DankMono.otf</file>
+    <file alias="icons/jino_icon_16x16.png">assets/icons/jino_icon_16x16.png</file>
+    <file alias="icons/jino_icon_32x32.png">assets/icons/jino_icon_32x32.png</file>
+    <file alias="icons/jino_icon_48x48.png">assets/icons/jino_icon_48x48.png</file>
+    <file alias="icons/jino_icon_64x64.png">assets/icons/jino_icon_64x64.png</file>
+    <file alias="icons/jino_icon_128x128.png">assets/icons/jino_icon_128x128.png</file>
+    <file alias="icons/jino_icon_256x256.png">assets/icons/jino_icon_256x256.png</file>
+    <file alias="icons/jino_icon_512x512.png">assets/icons/jino_icon_512x512.png</file>
+    <file alias="themes/tokyo_night.qss">data/themes/tokyo_night.qss</file>
+    <file alias="themes/everforest.qss">data/themes/everforest.qss</file>
+    <file alias="themes/nightowl.qss">data/themes/nightowl.qss</file>
+</qresource>
+</RCC>

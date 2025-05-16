@@ -1,0 +1,142 @@
+/* data/themes/tokyo_night.qss */
+/* Based on Tokyo Night Storm */
+
+QMainWindow {
+    /* background-color: #1a1b26; */ /* Base color, usually handled by palette */
+}
+
+QTextEdit {
+    font-family: 'Dank Mono'; /* Hardcoded font */
+    font-size: 14pt;          /* Hardcoded size */
+    color: #c0caf5;                 /* Text */
+    background-color: #1e1e2e;      /* Surface (Editor BG) */
+    selection-background-color: #7aa2f7; /* Highlight */
+    selection-color: #1a1b26;        /* Highlight Text */
+    border: none;
+}
+
+QWidget#LineNumberWidget {
+    background-color: #1a1b26;      /* Base */
+    border: none;
+    padding-right: 5px; /* Add some padding */
+}
+
+/* Tabs */
+QTabWidget::pane {
+    border-top: 0px;
+    border-bottom: 2px solid #1a1b26; /* Base/Border */
+    margin-bottom: -1px;
+}
+QTabBar::tab {
+    background: #1a1b26;            /* Base (Bar BG) */
+    color: #a9b1d6;                 /* Subtle Text for inactive tabs */
+    padding: 5px 10px 5px 10px;     /* Add horizontal padding */
+    border: 1px solid #1a1b26;      /* Base/Border */
+    border-top: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: #1e1e2e;            /* Surface (Editor BG for selected tab) */
+    color: #c0caf5;                 /* Text */
+}
+QTabBar::tab:!selected {
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+QTabBar {
+    qproperty-drawBase: 0; /* Remove double base line */
+}
+/* Style Tab Close Button */
+QTabBar::close-button {
+    background: transparent;
+    border-radius: 2px;
+    /* You might need to provide actual image assets for perfect look */
+    /* image: url(:/icons/close_tab_normal.png); */
+}
+QTabBar::close-button:hover {
+    background: #414868; /* A slightly lighter/different background on hover */
+    /* image: url(:/icons/close_tab_hover.png); */
+}
+QTabBar::close-button:pressed {
+    background: #7aa2f7; /* Highlight color on press */
+    /* image: url(:/icons/close_tab_pressed.png); */
+}
+
+
+/* Top Toolbar */
+QToolBar#TopStatusBar {
+    background: #1a1b26;            /* Base (Bar BG) */
+    border: none;
+    padding: 3px; /* Slightly more padding */
+    spacing: 10px; /* Spacing between items */
+}
+QToolBar#TopStatusBar QLabel {
+    color: #c0caf5;                 /* Bar Text */
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 3px; /* Add some margin between items */
+    margin-right: 3px;
+}
+QToolBar#TopStatusBar QToolButton { /* Style buttons if added later */
+    color: #c0caf5;
+    background-color: transparent;
+}
+QToolBar#TopStatusBar QToolButton:hover {
+    background-color: #1e1e2e;
+}
+
+
+/* Bottom Status Bar */
+QStatusBar {
+   background: #1a1b26;            /* Base (Bar BG) */
+   color: #c0caf5;                 /* Bar Text */
+   border-top: 1px solid #16161e; /* Slightly darker border */
+}
+QStatusBar QLabel { /* Style labels in status bar */
+   color: #c0caf5;                 /* Bar Text */
+   padding-left: 4px;
+   padding-right: 4px;
+   margin-left: 5px; /* Add some margin */
+   margin-right: 5px;
+}
+
+
+/* Menu Bar */
+QMenuBar {
+    background-color: #1a1b26;      /* Base (Bar BG) */
+    color: #c0caf5;                 /* Bar Text */
+    padding: 2px;
+}
+QMenuBar::item {
+    background: transparent;
+    padding: 4px 8px 4px 8px;
+}
+QMenuBar::item:selected {
+    background: #1e1e2e;            /* Surface (Hover BG) */
+    color: #c0caf5;                 /* Text */
+}
+
+/* Menus */
+QMenu {
+    background-color: #1e1e2e;      /* Surface */
+    color: #c0caf5;                 /* Text */
+    border: 1px solid #16161e;      /* Darker Border */
+    padding: 4px;
+}
+QMenu::item {
+    padding: 4px 20px 4px 20px; /* More padding */
+}
+QMenu::item:selected {
+    background-color: #7aa2f7;      /* Highlight */
+    color: #1a1b26;                 /* Highlight Text */
+}
+QMenu::separator {
+    height: 1px;
+    background: #16161e;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+QMenu::indicator:non-exclusive:checked { /* Checkmark styling */
+     /* TODO: Add a checkmark image or character */
+}

@@ -1,0 +1,35 @@
+#+TITLE: Jino Vision
+#+AUTHOR: json
+#+DATE: May 17, 2025
+
+* Vision
+
+Kwrite is an amazing editor, but it has some minor inconvenience; which didn't matter to me that much.
+
+But one day i thought about it like maybe create a minimal version of it. So, jino was created. It would help me to be more efficient
+
+and create an personal flavour of my own editor. i mean much more minimalistic version... More stripped down and lightweight.
+
+Jino -> This name randomly came to be mind when i thought about naming it. It was simple and i like it.
+
+Jino was build with with QT and cpp, it works well and kinda fast and eevything from keybindings to theming etc... are static
+
+hardcoded. It kind of works well and fast and i primarily use it to edit text content, org docs and sometimes markdown.
+
+It's like an editor which has an simple focus for editing text, without much complexity.
+
+** Future Plans:
+
+Migrate from QT -> Zed GPUI
+
+Why ?
+
+I worked with QT Apps for sometime, mainly a Arbitrage betting bot.
+
+So, that's why started with QT, as i am familiar with it. As of right now, working with C++ seems like kinda weird.
+
+So, i thought maybe move to rust, first thing came to my mind was GTK, but there exists an better option; GPUI from  Zed editor.
+
+Moving from C++ to Rust ( QT -> GPUI ) it would help me to learn more about how gpui works and it's internals.
+
+> To be continued...
